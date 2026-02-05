@@ -4,7 +4,7 @@ Modern, clean, responsive single-page portfolio built with HTML, CSS, and minima
 Showcases professional background, skills, and a curated selection of projects with smooth animations and mobile-first design.
 
 <p align="center">
-  <img src="portfolio/adiya.png" alt="Portfolio Hero Preview" width="800"/>
+ <img width="512" height="623" alt="Image" src="https://github.com/user-attachments/assets/ef0d12a9-c815-4f92-9482-6f36455505ae" />
   <br><br>
   
 </p>
