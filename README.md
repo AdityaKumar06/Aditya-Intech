@@ -11,8 +11,8 @@ Showcases professional background, skills, and a curated selection of projects w
 
 ## 🌐 Live Demo
 
-🔗 **https://yourusername.github.io/Aditya-Intech/**  
-(or your actual deployed link: Netlify / Vercel / Cloudflare Pages / custom domain)
+🔗 **https://aditya-intech.vercel.app/**  
+
 
 
 ## ✨ Features
