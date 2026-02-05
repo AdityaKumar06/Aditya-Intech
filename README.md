@@ -29,19 +29,20 @@ Showcases professional background, skills, and a curated selection of projects w
 
 ## 🗂 Project Structure
 ADITYA-INTECH/
-├── index.html              # Main portfolio page
+```
+├── index.html            
 ├── css/
-│   ├── styles.css          # Custom styles
-│   └── vendor.css          # Third-party / reset styles (if used)
+│   ├── styles.css          
+│   └── vendor.css          
 ├── js/
-│   ├── main.js             # Custom JavaScript (currently minimal)
-│   └── plugins.js          # External scripts / libraries (if any)
+│   ├── main.js            
+│   └── plugins.js          
 ├── images/
-│   ├── icons/              # Favicons, logos, small icons
+│   ├── icons/              
 │   │   ├── favicon.ico
 │   │   ├── apple-touch-icon.png
 │   │   └── ...
-│   └── portfolio/          # Project showcase screenshots
+│   └── portfolio/        
 │       ├── gallery-profile.png
 │       ├── apsensyscare.png
 │       ├── apsensysmedia.png
@@ -53,9 +54,11 @@ ADITYA-INTECH/
 │       ├── kushagrafaundation.png
 │       ├── tsr.png
 │       ├
-│       └── adiya.png       # hero / profile image
+│       └── adiya.png       
 ├── README.md
-└── site.webmanifest        # Web app manifest (PWA support)
+└── site.webmanifest        
+
+```
 
 
 ❤️ Show your support
