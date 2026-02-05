@@ -61,7 +61,16 @@ ADITYA-INTECH/
 ```
 
 
-❤️ Show your support
+❤️ Show your support <br>
+
+Made with ❤️ <br>
+
+**Aditya Kumar** <br>
+🔗 GitHub: [AdityaKumar06](https://github.com/AdityaKumar06)  
+🔗 LinkedIn: [Aditya Kumar](https://www.linkedin.com/in/adityakumar0614/)  
+
+<br>
+
 If you like this portfolio template, please ⭐ this repository!
-Made with 💙 by Aditya Kumar
+<br>
 Last updated: February 2025
