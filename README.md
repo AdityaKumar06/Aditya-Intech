@@ -6,7 +6,7 @@ Showcases professional background, skills, and a curated selection of projects w
 <p align="center">
   <img src="portfolio/adiya.png" alt="Portfolio Hero Preview" width="800"/>
   <br><br>
-  <em>Hero section preview (replace with your preferred full-page screenshot if available)</em>
+  
 </p>
 
 ## 🌐 Live Demo
