@@ -93,8 +93,8 @@ export default function Hero() {
   const opacity = useTransform(scrollYProgress, [0, 0.8], [1, 0]);
 
   return (
-    <section ref={sectionRef} className="relative min-h-[100dvh] w-full flex flex-col justify-center px-6 sm:px-12 lg:px-24 pt-28 pb-12 overflow-hidden">
-      <motion.div style={{ opacity }} className="max-w-6xl mx-auto w-full z-10 flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-8">
+    <section ref={sectionRef} className="relative min-h-[100dvh] w-full flex flex-col justify-start lg:justify-center px-6 sm:px-12 lg:px-24 pt-32 lg:pt-28 pb-20 overflow-x-clip">
+      <motion.div style={{ opacity }} className="max-w-6xl mx-auto w-full z-10 flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-8 mt-4 lg:mt-0">
 
         {/* 3D Robot — Top on Mobile (order-first), Right on Desktop (order-last) */}
         <motion.div style={{ y: yRobot }} className="order-first lg:order-last flex-shrink-0 flex justify-center w-full lg:w-auto">
@@ -147,7 +147,7 @@ export default function Hero() {
             >
               <div className="flex items-center gap-4">
                 <div className="h-px w-8 lg:w-12 bg-primary" />
-                <span className="text-primary text-xs sm:text-sm tracking-[0.3em] uppercase whitespace-nowrap" style={{ fontFamily: 'JetBrains Mono, monospace' }}>
+                <span className="text-primary text-[10px] sm:text-sm tracking-[0.2em] sm:tracking-[0.3em] uppercase text-center" style={{ fontFamily: 'JetBrains Mono, monospace' }}>
                   Turning ideas into reality 💡
                 </span>
                 <div className="h-px w-8 lg:w-12 bg-primary lg:hidden" />
