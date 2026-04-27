@@ -18,9 +18,13 @@ const Scene = lazy(() => import('./components/Canvas/Scene'));
 function App() {
   useEffect(() => {
     const lenis = new Lenis({
-      duration: 1.2,
+      duration: 1.5,
       easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-      smooth: true,
+      orientation: 'vertical',
+      gestureOrientation: 'vertical',
+      smoothWheel: true,
+      wheelMultiplier: 1.2,
+      touchMultiplier: 2,
     });
 
     function raf(time) {

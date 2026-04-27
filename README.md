@@ -1,16 +1,91 @@
-# React + Vite
+# 🚀 Aditya Kumar | 3D Interactive Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, highly interactive, and ultra-smooth 3D developer portfolio. Built to showcase projects, skills, and experience with a premium visual aesthetic and buttery-smooth animations.
 
-Currently, two official plugins are available:
+## ✨ Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **3D Interactive Canvas**: Powered by React Three Fiber & Drei, featuring an interactive waving robot, a rotating circuit sphere, and responsive background particles.
+- **Ultra-Smooth Scrolling**: Integrated **Lenis** smooth scroll for fluid, native-feeling continuous scrolling on both mobile and desktop.
+- **Dynamic Animations**: Built with **Framer Motion** for elegant staggered text reveals, glassmorphism cards, and parallax section transitions.
+- **Responsive Design**: Tailored experiences for desktop and mobile, ensuring 3D elements dynamically resize and position perfectly on any screen size.
+- **Custom UI Elements**: Featuring a custom magnetic cursor, intelligent scroll progress indicator, and a sleek preloader.
+- **Premium Glassmorphism**: Deep dark-mode aesthetic with frosted glass UI panels and a vibrant orange (`#f97316`) primary theme.
 
-## React Compiler
+## 🛠️ Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Framework**: [React 19](https://react.dev/) + [Vite](https://vitejs.dev/)
+- **3D Rendering**: [Three.js](https://threejs.org/) + [React Three Fiber](https://docs.pmnd.rs/react-three-fiber/) + [Drei](https://github.com/pmndrs/drei)
+- **Styling**: [Tailwind CSS v4](https://tailwindcss.com/)
+- **Animations**: [Framer Motion](https://www.framer.com/motion/) & [GSAP](https://gsap.com/)
+- **Smooth Scroll**: [Lenis](https://lenis.studiofreight.com/)
+- **Icons**: [Lucide React](https://lucide.dev/)
 
-## Expanding the ESLint configuration
+## 📂 Project Structure
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```bash
+portfolio/
+├── public/                 # Static assets
+│   ├── robot.glb           # 3D Robot Model
+│   └── vite.svg
+├── src/
+│   ├── components/
+│   │   ├── Canvas/         # R3F 3D Components
+│   │   │   └── Scene.jsx   # Background Particles & Globe
+│   │   ├── Sections/       # Main Page Sections
+│   │   │   ├── Hero.jsx    # Hero with 3D Robot
+│   │   │   ├── About.jsx   # About Me & Stats
+│   │   │   ├── Skills.jsx
+│   │   │   ├── Experience.jsx
+│   │   │   ├── Projects.jsx
+│   │   │   ├── Services.jsx
+│   │   │   └── Contact.jsx
+│   │   ├── CustomCursor.jsx
+│   │   ├── Navbar.jsx
+│   │   ├── Preloader.jsx
+│   │   ├── ScrollProgress.jsx
+│   │   └── SectionDivider.jsx
+│   ├── utils/
+│   │   └── data.js         # Centralized Portfolio Data
+│   ├── App.jsx             # Main Application Logic
+│   ├── index.css           # Global Styles & Animations
+│   └── main.jsx            # React Entry Point
+├── package.json
+├── postcss.config.js
+├── vite.config.js
+└── README.md
+```
+
+## 🚀 Getting Started
+
+To get this project up and running on your local machine:
+
+### 1. Clone the repository
+```bash
+git clone https://github.com/AdityaKumar06/portfolio.git
+cd portfolio
+```
+
+### 2. Install dependencies
+```bash
+npm install
+```
+
+### 3. Start the development server
+```bash
+npm run dev
+```
+
+### 4. Build for production
+```bash
+npm run build
+```
+
+## 👨‍💻 Author
+
+**Aditya Kumar**
+- GitHub: [@AdityaKumar06](https://github.com/AdityaKumar06)
+- Role: Full-Stack Developer
+- Email: adityakumar.connect2@gmail.com
+
+---
+*It works on my machine — then we ship the machine 🚀*

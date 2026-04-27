@@ -2,7 +2,7 @@ import { motion, useScroll, useTransform } from 'framer-motion';
 import { PORTFOLIO_DATA } from '../../utils/data';
 import { Code2, Mail, Camera, MessageCircle, ChevronDown } from 'lucide-react';
 import { useRef, useEffect, Suspense } from 'react';
-import { Canvas, useFrame } from '@react-three/fiber';
+import { Canvas, useFrame, useThree } from '@react-three/fiber';
 import { Float, useGLTF, useAnimations, ContactShadows } from '@react-three/drei';
 import * as THREE from 'three';
 import ParallaxWrapper from '../ParallaxWrapper';
@@ -12,6 +12,11 @@ function RobotCharacter() {
   const group = useRef();
   const { scene, animations } = useGLTF('/robot.glb');
   const { actions, names } = useAnimations(animations, group);
+  const { size } = useThree();
+  const isMobile = size.width < 768;
+  const scale = isMobile ? 0.48 : 0.55;
+  // Shift right slightly on mobile to optically center the body since the left hand sticks out
+  const xOffset = isMobile ? 0.3 : 0;
 
   useEffect(() => {
     const animName = names.includes('Wave') ? 'Wave' : names.includes('Idle') ? 'Idle' : names[0];
@@ -22,20 +27,20 @@ function RobotCharacter() {
 
   useFrame((state) => {
     if (group.current) {
-      group.current.rotation.y = THREE.MathUtils.lerp(group.current.rotation.y, state.pointer.x * 0.8, 0.05);
+      group.current.rotation.y = THREE.MathUtils.lerp(group.current.rotation.y, state.pointer.x * 0.8, 0.03);
     }
   });
 
   return (
     <>
       <Float speed={1.5} rotationIntensity={0.03} floatIntensity={0.2}>
-        <group ref={group} position={[0, -1.4, 0]} scale={0.55}>
+        <group ref={group} position={[xOffset, -1.4, 0]} scale={scale}>
           <primitive object={scene} />
         </group>
       </Float>
-      <ContactShadows position={[0, -1.4, 0]} scale={4} blur={2.5} opacity={0.4} far={4} color="#f97316" />
-      <mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, -1.39, 0]}>
-        <ringGeometry args={[0.8, 0.85, 64]} />
+      <ContactShadows position={[0, -1.4, 0]} scale={15} resolution={1024} blur={2} opacity={0.4} far={10} color="#f97316" />
+      <mesh rotation={[-Math.PI / 2, 0, 0]} position={[xOffset, -1.39, 0]}>
+        <ringGeometry args={[isMobile ? 0.7 : 0.8, isMobile ? 0.75 : 0.85, 64]} />
         <meshBasicMaterial color="#f97316" transparent opacity={0.3} />
       </mesh>
     </>
@@ -94,9 +99,9 @@ export default function Hero() {
         {/* 3D Robot — Top on Mobile (order-first), Right on Desktop (order-last) */}
         <motion.div style={{ y: yRobot }} className="order-first lg:order-last flex-shrink-0 flex justify-center w-full lg:w-auto">
           <motion.div
-             className="w-full max-w-[280px] sm:max-w-[320px] lg:w-[380px] relative z-20 flex flex-col items-center justify-center gap-6"
+             className="w-full max-w-[360px] sm:max-w-[420px] lg:w-[480px] relative z-20 flex flex-col items-center justify-center gap-6"
           >
-            <div className="w-full h-[220px] sm:h-[260px] lg:h-[400px]">
+            <div className="w-full h-[280px] sm:h-[320px] lg:h-[450px]">
               <Suspense fallback={null}>
                 <Canvas camera={{ position: [0, 0, 5.5], fov: 32 }} style={{ background: 'transparent' }}>
                   <ambientLight intensity={1.2} />
