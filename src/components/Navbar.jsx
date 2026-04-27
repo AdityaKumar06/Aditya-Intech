@@ -29,12 +29,12 @@ export default function Navbar() {
         initial={{ y: -100 }}
         animate={{ y: 0 }}
         transition={{ duration: 0.5, ease: "easeOut" }}
-        className="fixed top-0 w-full z-50 py-5 px-6 sm:px-12 lg:px-20 pt-6"
+        className="fixed top-0 left-0 w-full z-40 py-4 px-4 sm:px-12 lg:px-20"
       >
         {/* Soft blackout gradient behind the floating island to hide scrolling text seamlessly */}
-        <div className="absolute inset-0 top-0 w-full h-[120px] bg-gradient-to-b from-[#000000] via-[#000000]/90 to-transparent pointer-events-none -z-10" />
+        <div className="absolute inset-0 top-0 w-full h-[80px] sm:h-[120px] bg-gradient-to-b from-[#000000] via-[#000000]/90 to-transparent pointer-events-none -z-10" />
         
-        <div className="max-w-7xl mx-auto flex justify-between items-center glass-card rounded-2xl px-6 py-3">
+        <div className="max-w-7xl mx-auto flex justify-between items-center glass-card rounded-2xl px-5 sm:px-6 py-3">
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}

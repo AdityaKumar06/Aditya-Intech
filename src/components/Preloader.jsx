@@ -34,7 +34,7 @@ export default function Preloader() {
       {isLoading && (
         <motion.div
           key="preloader"
-          className="fixed inset-0 z-[200] flex flex-col items-center justify-between overflow-hidden bg-black py-12 md:py-20"
+          className="fixed inset-0 z-[999] flex flex-col items-center justify-between overflow-hidden bg-black py-12 md:py-20"
           exit={{
             opacity: 0,
             y: "-100%",

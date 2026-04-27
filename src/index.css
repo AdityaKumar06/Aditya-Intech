@@ -72,6 +72,12 @@
     padding: 0;
   }
 
+  html, body {
+    width: 100%;
+    overflow-x: hidden;
+    position: relative;
+  }
+
   html {
     scroll-behavior: smooth;
   }
@@ -79,7 +85,6 @@
   body {
     background-color: var(--color-background);
     color: var(--color-foreground);
-    overflow-x: hidden;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     font-family: var(--font-body);
